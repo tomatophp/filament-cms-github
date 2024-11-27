@@ -7,7 +7,6 @@ use Filament\Panel;
 
 class FilamentCmsGithubPlugin implements Plugin
 {
-
     public function getId(): string
     {
         return 'filament-cms-github';
