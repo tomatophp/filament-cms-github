@@ -1,4 +1,4 @@
-![Screenshot](https://raw.githubusercontent.com/tomatophp/filament-cms-github/master/art/screenshot.jpg)
+![Screenshot](https://raw.githubusercontent.com/tomatophp/filament-cms-github/master/art/fadymondy-tomato-cms-github.jpg)
 
 # Filament CMS GitHub Integration
 
@@ -7,6 +7,11 @@
 [![Downloads](https://poser.pugx.org/tomatophp/filament-cms-github/d/total.svg)](https://packagist.org/packages/tomatophp/filament-cms-github)
 
 GitHub integration for TomatoPHP CMS that automatically imports and synchronizes GitHub repository documentation (README files) as posts in your CMS. Perfect for maintaining documentation sites, portfolio showcases, or open-source project listings.
+
+
+## Screenshot
+
+![Import Action](https://raw.githubusercontent.com/tomatophp/filament-cms-github/master/art/import.png)
 
 ## Features
 
