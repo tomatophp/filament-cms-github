@@ -1,4 +1,4 @@
-![Screenshot](![Screenshot](https://raw.githubusercontent.com/tomatophp/filament-wallet/master/arts/fadymondy-tomato-cms-github.jpg)
+![Screenshot](https://raw.githubusercontent.com/tomatophp/filament-cms-github/master/arts/fadymondy-tomato-cms-github.jpg)
 
 # Filament CMS GitHub Integration
 
@@ -14,7 +14,7 @@ GitHub integration for TomatoPHP CMS that automatically imports and synchronizes
 
 ## Screenshot
 
-![Import Action](https://raw.githubusercontent.com/tomatophp/filament-wallet/master/arts/import.png)
+![Import Action](https://raw.githubusercontent.com/tomatophp/filament-cms-github/master/arts/import.png)
 
 ## Features
 
