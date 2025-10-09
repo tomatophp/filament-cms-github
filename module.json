@@ -1,0 +1,29 @@
+{
+    "name": "FilamentCmsGithub",
+    "alias": "filament-cms-github",
+    "description": {
+        "ar": "Github integration to import your repo docs README files as a docs on markdown format to TomatoPHP CMS",
+        "en": "Github integration to import your repo docs README files as a docs on markdown format to TomatoPHP CMS",
+        "gr": "Github integration to import your repo docs README files as a docs on markdown format to TomatoPHP CMS",
+        "sp": "Github integration to import your repo docs README files as a docs on markdown format to TomatoPHP CMS"
+    },
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "TomatoPHP\\FilamentCmsGithub\\FilamentCmsGithubServiceProvider"
+    ],
+    "files": [],
+    "title": {
+        "ar": "Filament cms github",
+        "en": "Filament cms github",
+        "gr": "Filament cms github",
+        "sp": "Filament cms github"
+    },
+    "color": "#cc1448",
+    "icon": "heroicon-c-users",
+    "placeholder": "https://raw.githubusercontent.com/tomatophp/filament-cms-github/master/art/screenshot.jpg",
+    "type": "plugin",
+    "version": "v1.0.0",
+    "github" : "https://github.com/tomatophp/filament-cms-github",
+    "docs" : "https://github.com/tomatophp/filament-cms-github"
+}
