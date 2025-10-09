@@ -1,17 +1,20 @@
-![Screenshot](https://raw.githubusercontent.com/tomatophp/filament-cms-github/master/art/fadymondy-tomato-cms-github.jpg)
+![Screenshot](![Screenshot](https://raw.githubusercontent.com/tomatophp/filament-wallet/master/arts/fadymondy-tomato-cms-github.jpg)
 
 # Filament CMS GitHub Integration
 
 [![Latest Stable Version](https://poser.pugx.org/tomatophp/filament-cms-github/version.svg)](https://packagist.org/packages/tomatophp/filament-cms-github)
 [![License](https://poser.pugx.org/tomatophp/filament-cms-github/license.svg)](https://packagist.org/packages/tomatophp/filament-cms-github)
 [![Downloads](https://poser.pugx.org/tomatophp/filament-cms-github/d/total.svg)](https://packagist.org/packages/tomatophp/filament-cms-github)
+[![Dependabot Updates](https://github.com/tomatophp/filament-cms-github/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/tomatophp/filament-cms-github/actions/workflows/dependabot/dependabot-updates)
+[![PHP Code Styling](https://github.com/tomatophp/filament-cms-github/actions/workflows/fix-php-code-styling.yml/badge.svg)](https://github.com/tomatophp/filament-cms-github/actions/workflows/fix-php-code-styling.yml)
+[![Tests](https://github.com/tomatophp/filament-cms-github/actions/workflows/tests.yml/badge.svg)](https://github.com/tomatophp/filament-cms-github/actions/workflows/tests.yml)
 
 GitHub integration for TomatoPHP CMS that automatically imports and synchronizes GitHub repository documentation (README files) as posts in your CMS. Perfect for maintaining documentation sites, portfolio showcases, or open-source project listings.
 
 
 ## Screenshot
 
-![Import Action](https://raw.githubusercontent.com/tomatophp/filament-cms-github/master/art/import.png)
+![Import Action](https://raw.githubusercontent.com/tomatophp/filament-wallet/master/arts/import.png)
 
 ## Features
 
