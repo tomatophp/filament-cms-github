@@ -135,7 +135,7 @@ it('can handle GitHub refresh job successfully', function () {
     $posts = Post::factory()->count(3)->create([
         'type' => 'open-source',
         'meta_url' => 'https://github.com/tomatophp/filament-cms',
-        'slug' => fn() => 'filament-cms-' . uniqid(),
+        'slug' => fn () => 'filament-cms-' . uniqid(),
     ]);
 
     Http::fake([
@@ -173,7 +173,7 @@ it('only refreshes posts with meta_url', function () {
     Post::factory()->count(2)->create([
         'type' => 'open-source',
         'meta_url' => 'https://github.com/tomatophp/filament-cms',
-        'slug' => fn() => 'filament-cms-' . uniqid(),
+        'slug' => fn () => 'filament-cms-' . uniqid(),
     ]);
 
     Post::factory()->create([

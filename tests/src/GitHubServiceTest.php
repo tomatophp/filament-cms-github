@@ -339,7 +339,7 @@ it('can refresh all posts', function () {
     Post::factory()->count(3)->create([
         'type' => 'open-source',
         'meta_url' => 'https://github.com/tomatophp/filament-cms',
-        'slug' => fn() => 'filament-cms-' . uniqid(),
+        'slug' => fn () => 'filament-cms-' . uniqid(),
     ]);
 
     Http::fake([

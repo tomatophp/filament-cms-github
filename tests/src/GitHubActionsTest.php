@@ -120,7 +120,7 @@ it('GitHub refresh action has correct color', function () {
 
 it('can dispatch GitHub refresh job when action is executed', function () {
     // Directly test the job dispatching
-    dispatch(new GitHubMetaRefreshJob());
+    dispatch(new GitHubMetaRefreshJob);
 
     Queue::assertPushed(GitHubMetaRefreshJob::class);
 });
