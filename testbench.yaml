@@ -11,8 +11,9 @@ providers:
   - Filament\Widgets\WidgetsServiceProvider
   - Filament\Schemas\SchemasServiceProvider
   - RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider
-  - TomatoPHP\FilamentCmsYoutube\FilamentCmsYoutubeServiceProvider
-  - TomatoPHP\FilamentCmsYoutube\Tests\AdminPanelProvider
+  - TomatoPHP\FilamentCms\FilamentCmsServiceProvider
+  - TomatoPHP\FilamentCmsGithub\FilamentCmsGithubServiceProvider
+  - TomatoPHP\FilamentCmsGithub\Tests\AdminPanelProvider
 
 workbench:
   welcome: true

@@ -1,16 +1,16 @@
 <?php
 
 use Filament\Facades\Filament;
-use TomatoPHP\FilamentCmsYoutube\FilamentCmsYoutubePlugin;
+use TomatoPHP\FilamentCmsGithub\FilamentCmsGithubPlugin;
 
 it('registers plugin', function () {
     $panel = Filament::getCurrentOrDefaultPanel();
 
     $panel->plugins([
-        FilamentCmsYoutubePlugin::make(),
+        FilamentCmsGithubPlugin::make(),
     ]);
 
-    expect($panel->getPlugin('filament-youtube-cms'))
+    expect($panel->getPlugin('filament-cms-github'))
         ->not()
         ->toThrow(Exception::class);
 });

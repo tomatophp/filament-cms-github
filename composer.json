@@ -5,7 +5,13 @@
     "keywords": [
         "php",
         "laravel",
-        "template"
+        "github",
+        "filamentphp",
+        "filament-cms",
+        "tomatophp",
+        "integration",
+        "github-readme",
+        "github-docs-import"
     ],
     "license": "MIT",
     "autoload": {
@@ -16,7 +22,8 @@
     "autoload-dev": {
         "psr-4": {
             "TomatoPHP\\FilamentCmsGithub\\Tests\\": "tests/src/",
-            "TomatoPHP\\FilamentCmsGithub\\Tests\\Database\\Factories\\": "tests/database/factories"
+            "TomatoPHP\\FilamentCmsGithub\\Tests\\Database\\Factories\\": "tests/database/factories",
+            "TomatoPHP\\FilamentCms\\Tests\\Database\\Factories\\": "tests/database/factories"
         }
     },
     "extra": {
@@ -49,7 +56,8 @@
     },
     "require": {
         "php": "^8.2|^8.3|^8.4",
-        "tomatophp/console-helpers": "^1.1"
+        "tomatophp/console-helpers": "^1.1",
+        "tomatophp/filament-cms": "^4.0"
     },
     "require-dev": {
         "larastan/larastan": "^2.9||^3.0",

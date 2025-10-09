@@ -1,6 +1,6 @@
 <?php
 
-namespace TomatoPHP\FilamentCmsYoutube\Tests;
+namespace TomatoPHP\FilamentCmsGithub\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -14,13 +14,15 @@ use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
 use Illuminate\Config\Repository;
+use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\Attributes\WithEnv;
 use Orchestra\Testbench\Concerns\WithWorkbench;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
-use TomatoPHP\FilamentCmsYoutube\FilamentCmsYoutubeServiceProvider;
-use TomatoPHP\FilamentCmsYoutube\Tests\Models\User;
+use TomatoPHP\FilamentCms\FilamentCmsServiceProvider;
+use TomatoPHP\FilamentCmsGithub\FilamentCmsGithubServiceProvider;
+use TomatoPHP\FilamentCmsGithub\Tests\Models\User;
 
 #[WithEnv('DB_CONNECTION', 'testing')]
 abstract class TestCase extends BaseTestCase
@@ -44,7 +46,8 @@ abstract class TestCase extends BaseTestCase
             TablesServiceProvider::class,
             WidgetsServiceProvider::class,
             SchemasServiceProvider::class,
-            FilamentCmsYoutubeServiceProvider::class,
+            FilamentCmsServiceProvider::class,
+            FilamentCmsGithubServiceProvider::class,
             AdminPanelProvider::class,
         ];
 
@@ -73,6 +76,9 @@ abstract class TestCase extends BaseTestCase
                 ...$config->get('view.paths'),
                 __DIR__ . '/../resources/views',
             ]);
+
+            // Configure media library for tests
+            $config->set('media-library.media_model', \Spatie\MediaLibrary\MediaCollections\Models\Media::class);
         });
     }
 }
