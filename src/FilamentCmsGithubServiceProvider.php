@@ -3,6 +3,7 @@
 namespace TomatoPHP\FilamentCmsGithub;
 
 use Illuminate\Support\ServiceProvider;
+use TomatoPHP\FilamentCmsGithub\Console\FilamentCmsGithubInstall;
 
 class FilamentCmsGithubServiceProvider extends ServiceProvider
 {
@@ -10,7 +11,7 @@ class FilamentCmsGithubServiceProvider extends ServiceProvider
     {
         // Register generate command
         $this->commands([
-            \TomatoPHP\FilamentCmsGithub\Console\FilamentCmsGithubInstall::class,
+            FilamentCmsGithubInstall::class,
         ]);
 
         // Register Langs

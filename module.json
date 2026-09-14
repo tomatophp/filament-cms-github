@@ -23,7 +23,7 @@
     "icon": "heroicon-c-users",
     "placeholder": "https://raw.githubusercontent.com/tomatophp/filament-cms-github/master/art/screenshot.jpg",
     "type": "plugin",
-    "version": "v1.0.0",
-    "github" : "https://github.com/tomatophp/filament-cms-github",
-    "docs" : "https://github.com/tomatophp/filament-cms-github"
+    "version": "v5.0.0",
+    "github": "https://github.com/tomatophp/filament-cms-github",
+    "docs": "https://github.com/tomatophp/filament-cms-github"
 }

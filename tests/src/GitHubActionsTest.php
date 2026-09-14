@@ -2,6 +2,7 @@
 
 namespace TomatoPHP\FilamentCmsGithub\Tests;
 
+use Filament\Actions\Action;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Queue;
 use TomatoPHP\FilamentCmsGithub\Filament\Actions\GithubImportAction;
@@ -21,7 +22,7 @@ beforeEach(function () {
 it('can create GitHub import action', function () {
     $action = GithubImportAction::make();
 
-    expect($action)->toBeInstanceOf(\Filament\Actions\Action::class)
+    expect($action)->toBeInstanceOf(Action::class)
         ->and($action->getName())->toBe('github-import');
 });
 
@@ -96,7 +97,7 @@ it('GitHub import action sends success notification', function () {
 it('can create GitHub refresh action', function () {
     $action = GithubRefreshAction::make();
 
-    expect($action)->toBeInstanceOf(\Filament\Actions\Action::class)
+    expect($action)->toBeInstanceOf(Action::class)
         ->and($action->getName())->toBe('github-refresh');
 });
 

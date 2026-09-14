@@ -55,12 +55,18 @@ public function panel(Panel $panel): Panel
 }
 ```
 
+The import action lives in the posts page "Content Import" group, so enable it on the CMS plugin:
+
+```php
+->plugin(\TomatoPHP\FilamentCms\FilamentCMSPlugin::make()->allowContentImport())
+```
+
 ## Requirements
 
-- PHP 8.2 or higher
-- Laravel 10.x or 11.x
-- Filament 3.x
-- TomatoPHP CMS 4.x
+| Package version | Filament CMS | Filament | Laravel     | PHP  |
+|-----------------|--------------|----------|-------------|------|
+| 5.x             | 5.x          | 5.x      | 12.x, 13.x  | 8.2+ |
+| 4.x             | 4.x          | 4.x      | 11.x, 12.x  | 8.2+ |
 
 ## Configuration
 

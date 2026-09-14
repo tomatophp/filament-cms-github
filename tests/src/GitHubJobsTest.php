@@ -10,6 +10,7 @@ use TomatoPHP\FilamentCms\Events\PostUpdated;
 use TomatoPHP\FilamentCms\Models\Post;
 use TomatoPHP\FilamentCmsGithub\Jobs\GitHubMetaGetterJob;
 use TomatoPHP\FilamentCmsGithub\Jobs\GitHubMetaRefreshJob;
+use TomatoPHP\FilamentCmsGithub\Services\GitHubService;
 use TomatoPHP\FilamentCmsGithub\Tests\Models\User;
 
 use function Pest\Laravel\actingAs;
@@ -65,7 +66,7 @@ it('can handle GitHub meta getter job successfully', function () {
         panel: 'admin'
     );
 
-    $job->handle(new \TomatoPHP\FilamentCmsGithub\Services\GitHubService);
+    $job->handle(new GitHubService);
 
     expect(Post::where('slug', 'filament-cms')->exists())->toBeTrue();
 
@@ -106,7 +107,7 @@ it('sends success notification when GitHub import succeeds', function () {
         userType: get_class($this->user)
     );
 
-    $job->handle(new \TomatoPHP\FilamentCmsGithub\Services\GitHubService);
+    $job->handle(new GitHubService);
 
     // Verify the post was created successfully (notification is sent in job, but hard to test in isolation)
     expect(Post::where('slug', 'filament-cms')->exists())->toBeTrue();
@@ -123,7 +124,7 @@ it('sends failure notification when GitHub import fails', function () {
         userType: get_class($this->user)
     );
 
-    $job->handle(new \TomatoPHP\FilamentCmsGithub\Services\GitHubService);
+    $job->handle(new GitHubService);
 
     // Verify the post was NOT created (notification is sent in job, but hard to test in isolation)
     expect(Post::where('slug', 'repo')->exists())->toBeFalse();
@@ -162,7 +163,7 @@ it('can handle GitHub refresh job successfully', function () {
     ]);
 
     $job = new GitHubMetaRefreshJob;
-    $job->handle(new \TomatoPHP\FilamentCmsGithub\Services\GitHubService);
+    $job->handle(new GitHubService);
 
     Event::assertDispatched(PostUpdated::class, 3);
 });
@@ -206,7 +207,7 @@ it('only refreshes posts with meta_url', function () {
     ]);
 
     $job = new GitHubMetaRefreshJob;
-    $job->handle(new \TomatoPHP\FilamentCmsGithub\Services\GitHubService);
+    $job->handle(new GitHubService);
 
     // Should only dispatch 2 PostUpdated events (for posts with meta_url)
     Event::assertDispatched(PostUpdated::class, 2);
@@ -224,7 +225,7 @@ it('handles errors gracefully in GitHub meta getter job', function () {
     );
 
     // Should not throw exception
-    $job->handle(new \TomatoPHP\FilamentCmsGithub\Services\GitHubService);
+    $job->handle(new GitHubService);
 
     expect(Post::where('slug', 'filament-cms')->exists())->toBeFalse();
 });
@@ -268,7 +269,7 @@ it('can update existing post when importing duplicate repository', function () {
         userType: get_class($this->user)
     );
 
-    $job->handle(new \TomatoPHP\FilamentCmsGithub\Services\GitHubService);
+    $job->handle(new GitHubService);
 
     $existingPost->refresh();
 

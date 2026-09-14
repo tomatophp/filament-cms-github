@@ -20,6 +20,7 @@ use Orchestra\Testbench\Attributes\WithEnv;
 use Orchestra\Testbench\Concerns\WithWorkbench;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use TomatoPHP\FilamentCms\FilamentCmsServiceProvider;
 use TomatoPHP\FilamentCmsGithub\FilamentCmsGithubServiceProvider;
 use TomatoPHP\FilamentCmsGithub\Tests\Models\User;
@@ -78,7 +79,7 @@ abstract class TestCase extends BaseTestCase
             ]);
 
             // Configure media library for tests
-            $config->set('media-library.media_model', \Spatie\MediaLibrary\MediaCollections\Models\Media::class);
+            $config->set('media-library.media_model', Media::class);
         });
     }
 }
